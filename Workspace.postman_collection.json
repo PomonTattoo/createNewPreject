@@ -144,22 +144,22 @@
 							"console.log(responseData[1].name);",
 							"",
 							"pm.test(\"Verify name equals to<Select insurance Plan> for [member of] request\", function(){",
-							"    pm.expect(responseData[1].name).to.equal('Select_insurance_Plan');",
+							"    pm.expect(responseData[1].name).to.equal('gqwrg');",
 							"});",
 							"",
 							"",
 							"pm.test(\"Verify name equals to<Select insurance Plan> for [member of] request\", function(){",
-							"    pm.expect(responseData[1].id).to.equal('mXh1TYQB4RLga14-h2Gd');",
+							"    pm.expect(responseData[1].id).to.equal('U0eVpIABAKYUYCIqMFeq');",
 							"});",
 							"",
 							"",
 							"pm.test(\"Verify name equals to<Select insurance Plan> for [member of] request\", function(){",
-							"    pm.expect(responseData[1].userId).to.equal('qbZtTYQBriPkCenVYgTb');",
+							"    pm.expect(responseData[1].userId).to.equal('97hdcIAB-TtdgkSgXUeI');",
 							"});",
 							"",
 							"",
 							"pm.test(\"Verify name equals to<Select insurance Plan> for [member of] request\", function(){",
-							"    pm.expect(responseData[1].description).to.equal('Car insurance\\nhouse insurance');",
+							"    pm.expect(responseData[1].description).to.equal('vREBVerv');",
 							"});",
 							"",
 							"console.log(responseData[1].id)",
@@ -492,6 +492,19 @@
 		},
 		{
 			"name": "deletePreject",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
