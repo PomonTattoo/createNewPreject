@@ -269,9 +269,9 @@
 							"});",
 							"",
 							"var responseData = pm.response.json();",
-							"console.log(jsonResponse);",
 							"",
-							"postman.setEnvironmentVariable(\"projectId\", jsonResponse.id);"
+							"",
+							"postman.setEnvironmentVariable(\"projectId\", responseData.id);"
 						],
 						"type": "text/javascript"
 					}
@@ -464,10 +464,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"created\": 1667961882681,\n    \"description\": \"Saving money\",\n    \"id\": \"{{projectID}}\",\n    \"lastModified\": 1667962050954,\n    \"name\": \"my first put update\",\n    \"tags\": [],\n    \"type\": \"DESIGN\",\n    \"userId\": \"{{userId}}\",\n    \"workspaceId\": \"{{workspaceId}}\"\n}"
+					"raw": "{\n    \"created\": 1667961882681,\n    \"description\": \"Saving money\",\n    \"id\": \"{{projectId}}\",\n    \"lastModified\": 1667962050954,\n    \"name\": \"my first put update\",\n    \"tags\": [],\n    \"type\": \"DESIGN\",\n    \"userId\": \"{{userId}}\",\n    \"workspaceId\": \"{{workspaceId}}\"\n}"
 				},
 				"url": {
-					"raw": "https://api.octoperf.com/design/projects/{{projectID}}",
+					"raw": "https://api.octoperf.com/design/projects/{{projectId}}",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -477,7 +477,7 @@
 					"path": [
 						"design",
 						"projects",
-						"{{projectID}}"
+						"{{projectId}}"
 					],
 					"query": [
 						{
@@ -497,8 +497,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -577,7 +577,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://api.octoperf.com/design/projects/{{projectID}}",
+					"raw": "https://api.octoperf.com/design/projects/{{projectId}}",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -587,7 +587,7 @@
 					"path": [
 						"design",
 						"projects",
-						"{{projectID}}"
+						"{{projectId}}"
 					]
 				}
 			},
